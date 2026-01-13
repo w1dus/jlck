@@ -55,9 +55,28 @@ p{ word-break: keep-all; }
 
 /* header */
 header{ position: fixed; left: 0; top: 0; z-index: 999; width: 100%; font-family: 'KoPub Batang'; padding: 16px 0; background-color: #0E1F39; color: #fff; }
+header.main.active{ background-color: transparent; color: #fff; }
 header .inner{ display: flex; align-items: center; justify-content: space-between; }
 header .logo.white{ display: none; }
 header .menu-list{ display: flex; align-items: center; gap: 55px; }
 header .menu-btn{ display: none; }
 header .contact-btn{ line-height: 1.5em; display: flex; align-items: center; gap: 6px; font-size: 18px; background-color: #CCA95A; color: #fff; padding: 5px 50px; gap: 6px; }
 header .contact-btn .dot{ display: block; flex-shrink: 0; background-color: #fff; width: 6px; height: 6px; border-radius: 50%; }
+
+
+@media screen and (max-width: 1250px) { 
+    header .logo{ width: 200px; }
+    header .contact-btn{ padding: 5px 28px; }
+    header .menu-list{ gap: 40px; }
+}
+@media screen and (max-width: 950px) { 
+    header .menu-list{ display: none; }
+    header .btn-wrap{ display: flex; align-items: center; gap: 10px; }
+    header .menu-btn{ display: block; background-color: transparent; border: none; padding: 0; }
+    header .menu-btn .icon{ width: 30px; }
+}
+@media screen and (max-width: 650px) { 
+    header .logo{ width: 150px; }
+    header .contact-btn{ padding: 5px 15px; font-size: 12px; }
+    header .menu-btn .icon{ width: 25px; }
+}
