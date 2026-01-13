@@ -46,10 +46,18 @@ select::-ms-expand{ display:none; }
 p{ word-break: keep-all; }
 
 @media screen and (max-width: 1250px) { 
-    .inner{ width:100%; padding:0 10px; }
+    .inner{ width:100%; padding:0 3vw; }
 } /* tablet */
 @media screen and (max-width: 650px) { 
     .paging_box{ font-size: 13px; }
 } /* mobile */
 
 
+/* header */
+header{ position: fixed; left: 0; top: 0; z-index: 999; width: 100%; font-family: 'KoPub Batang'; padding: 16px 0; background-color: #0E1F39; color: #fff; }
+header .inner{ display: flex; align-items: center; justify-content: space-between; }
+header .logo.white{ display: none; }
+header .menu-list{ display: flex; align-items: center; gap: 55px; }
+header .menu-btn{ display: none; }
+header .contact-btn{ line-height: 1.5em; display: flex; align-items: center; gap: 6px; font-size: 18px; background-color: #CCA95A; color: #fff; padding: 5px 50px; gap: 6px; }
+header .contact-btn .dot{ display: block; flex-shrink: 0; background-color: #fff; width: 6px; height: 6px; border-radius: 50%; }
