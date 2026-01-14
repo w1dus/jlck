@@ -13,7 +13,8 @@ document.addEventListener("scroll", function(){
 
 
 const privacyUsePopup = () => {
-    $('.privacyPopupBtn').click(function(){
+    $('.privacyPopupBtn').click(function(e){
+        e.preventDefault();
         $('#privacyPopup').addClass('active');
     })
     $('.usePopupBtn').click(function(){

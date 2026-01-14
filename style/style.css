@@ -2,7 +2,7 @@
 
 /* 색 설정 */
 :root {
-    --main-color: #CF2E41;
+    --main-color: #CCA95A;
     --black-color : #222;
     --white-color : #fff
 }
@@ -55,14 +55,13 @@ p{ word-break: keep-all; }
 
 /* header */
 header{ position: fixed; left: 0; top: 0; z-index: 999; width: 100%; font-family: 'KoPub Batang'; padding: 16px 0; background-color: #0E1F39; color: #fff; }
-header.main.active{ background-color: transparent; color: #fff; }
+header.main.active{ background-color: rgba(255, 255, 255, 0.1); color: #fff; box-shadow: 8px 13px 17px 0 rgba(0, 0, 0, 0.05); border-bottom: 1px solid #efefef; }
 header .inner{ display: flex; align-items: center; justify-content: space-between; }
 header .logo.white{ display: none; }
 header .menu-list{ display: flex; align-items: center; gap: 55px; }
 header .menu-btn{ display: none; }
 header .contact-btn{ line-height: 1.5em; display: flex; align-items: center; gap: 6px; font-size: 18px; background-color: #CCA95A; color: #fff; padding: 5px 50px; gap: 6px; }
 header .contact-btn .dot{ display: block; flex-shrink: 0; background-color: #fff; width: 6px; height: 6px; border-radius: 50%; }
-
 
 @media screen and (max-width: 1250px) { 
     header .logo{ width: 200px; }
@@ -80,3 +79,59 @@ header .contact-btn .dot{ display: block; flex-shrink: 0; background-color: #fff
     header .contact-btn{ padding: 5px 15px; font-size: 12px; }
     header .menu-btn .icon{ width: 25px; }
 }
+
+
+/* .slide-menu */
+.slide-menu-bg{ opacity: 0; visibility: hidden; position: fixed; right: 0; top: 0; cursor: pointer; z-index: 999; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+.slide-menu-bg.show{ opacity: 1; visibility: visible; }
+.slide-menu{ transition: right .5s; padding: 20px 0; position: fixed; right: -300px; top: 0; z-index: 9999; width: 90%; max-width: 300px; height: 100%; background-color: #fff; }
+.slide-menu.show{ right: 0; }
+.slide-menu .btn-div{ padding: 0 10px; display: flex; align-items: center; justify-content: flex-end; }
+.slide-menu .btn-div .close-btn{ background: transparent; border: none; } 
+.slide-menu .btn-div .close-btn .icon{ width: 20px; }
+.slide-menu .menu-list{ margin: 30px 0 0 0; border-top:1px solid #efefef; }
+.slide-menu .menu-list > li{ border-bottom:1px solid #efefef; }
+.slide-menu .menu-list a{ color: #515151; display: block; padding: 15px 10px; }
+
+
+/* footer */
+footer{ padding: 50px 0; background-color: #1B1917; color: #fff; }
+footer .box1{ border-bottom: 1px solid rgba(217,217,217,0.4); padding: 0 0 16px 0; display: flex; align-items: flex-end; justify-content: space-between; }
+footer .box1 .privacy-btn{ position: relative; overflow: hidden; border: 1px solid #fff; padding: 6px 28px; border-radius: 100px; }
+footer .box1 .privacy-btn::before{ transition: width .5s; content: ''; display: block; position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: #fff; }
+footer .box1 .privacy-btn .text{ font-weight: 500; position: relative; z-index: 2; }
+footer .box1 .privacy-btn:hover{ color: #1B1917; }
+footer .box1 .privacy-btn:hover::before{ width: 100%; }
+footer .box2{ margin-top: 32px; display: flex; align-items: flex-end; justify-content: space-between; gap: 100px; }
+footer .box2 .copyright{ flex-shrink: 0; color: #7F7F7F; font-size: 12px; }
+footer .box2 .item-div{ display: flex; flex-wrap: wrap; gap: 8px; }
+
+footer .box2 .item-div .item:nth-child(1),
+footer .box2 .item-div .item:nth-child(4){ width: calc(50% - 4px); }
+
+footer .box2 .item-div .item:nth-child(2),
+footer .box2 .item-div .item:nth-child(3),
+footer .box2 .item-div .item:nth-child(5),
+footer .box2 .item-div .item:nth-child(6){ width: calc(25% - 6px); }
+
+footer .box2 .item-div .item .label{ color: #fff; font-weight: 700; }
+footer .box2 .item-div .item .content{ color: #7A7A7A; line-height: 1.5em; margin-top: 2px; }
+
+@media screen and (max-width: 1250px) { 
+    footer .box2{ flex-wrap: wrap; gap: 20px; }
+
+}
+@media screen and (max-width: 950px) { 
+    footer .box1 .logo{ width: 200px; }
+    footer .box2 .item-div .item{ width: 100% !important; }
+}
+@media screen and (max-width: 650px) { 
+    footer{ font-size: 14px; padding:40px 0 30px 0; }
+    footer .box1 .logo{ width: 150px; }
+    footer .box1 .privacy-btn{ font-size: 14px; padding: 5px 10px; }
+}
+
+
+/* .main .section1 */
+.main .section1{ background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.main .section1 .inner{ position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
