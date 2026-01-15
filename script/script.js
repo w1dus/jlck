@@ -2,8 +2,19 @@
 
 document.addEventListener("DOMContentLoaded", function(e){
     headerMenuSlide()
+    youtubeBackground()
+    mainToggleTab();
 })
 
+/* main페이지 최적의 전략 토글 탭 */
+const mainToggleTab = () => {
+    
+}
+
+/* youtube background */
+const youtubeBackground = () => {  
+    $('[data-vbg]').youtube_background(); // 실행
+}
 
 /* 헤더 메뉴 슬라이드 */
 const headerMenuSlide = () => {

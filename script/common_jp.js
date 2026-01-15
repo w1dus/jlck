@@ -54,15 +54,15 @@ const bodyScroll = () => {
   
 const headerScrollHandler = () => {
     /* header */
-    const header_main = document.querySelector('header');
+    const header_main = document.querySelector('header.main');
 
     if(header_main){
         document.addEventListener("scroll", function(){
             let scroll_top = window.scrollY;
             if(scroll_top > 0){
-                header_main.classList.add("on");
+                header_main.classList.remove("active");
             }else{
-                header_main.classList.remove("on");
+                header_main.classList.add("active");
             }
         })
     }
