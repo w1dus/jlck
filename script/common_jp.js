@@ -76,11 +76,11 @@ const animationOnHandler = () => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('on');
                 } else {
-                    entry.target.classList.remove('on');
+                    // entry.target.classList.remove('on');
                 }
             });
         }, {
-            threshold: 0.5 // Adjust threshold as needed
+            threshold: 0.1 // Adjust threshold as needed
         });
         
         // Observe each .ani element

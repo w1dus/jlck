@@ -1,20 +1,93 @@
 @charset "utf-8";
-/* animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; */
+/* animation: fadeIn  .3s ease-in-out 0s 1 forwards running; */
 
+
+.main .section1 .content-wrap h1{ opacity: 0; }
+.main .section1.on .content-wrap h1{ animation: fadeInLeft  .3s ease-in-out 0s 1 forwards running; }
+
+.main .section1 .content-wrap .content{ opacity: 0; }
+.main .section1.on .content-wrap .content{ animation: fadeInLeft  .3s ease-in-out 0.1s 1 forwards running; }
+
+.main .section1 .content-wrap .more-btn{ opacity: 0; }
+.main .section1.on .content-wrap .more-btn{ animation: fadeInLeft  .3s ease-in-out 0.2s 1 forwards running; }
+
+/* .main .section1 .img{ opacity: 0; }
+.main .section1.on .img{ animation: fadeIn  .3s ease-in-out 0s 1 forwards running; } */
+
+.main h2{ opacity: 0; }
+.main .on h2{ animation: fadeIn  .3s ease-in-out 0s 1 forwards running; }
+.main .main-content{ opacity: 0; }
+.main .on .main-content{ animation: fadeIn  .3s ease-in-out 0.1s 1 forwards running; }
+.main .section2 .item-list a{ opacity: 0; }
+.main .section2.on .item-list a:nth-child(1){ animation: fadeIn  .3s ease-in-out 0.3s 1 forwards running; }
+.main .section2.on .item-list a:nth-child(2){ animation: fadeIn  .3s ease-in-out 0.4s 1 forwards running; }
+.main .section2.on .item-list a:nth-child(3){ animation: fadeIn  .3s ease-in-out  .3s 1 forwards running; }
+.main .section2.on .item-list a:nth-child(4){ animation: fadeIn  .3s ease-in-out 0.6s 1 forwards running; }
+
+.main h3{ opacity: 0; }
+.main .on h3{ animation: fadeIn  .3s ease-in-out 0s 1 forwards running; }
+
+.main .section3 .content{ opacity: 0; }
+.main .section3.on .content{ animation: fadeIn  .3s ease-in-out 0.1s 1 forwards running; }
+
+.main .section3 .item-list{ opacity: 0; }
+.main .section3.on .item-list{ animation: fadeIn  .3s ease-in-out 0.2s 1 forwards running; }
+
+.main .section4 .item-list{ opacity: 0; }
+.main .section4.on .item-list{ animation: fadeIn  .3s ease-in-out 0.3s 1 forwards running; }
+
+
+.main .category-wrap{ opacity: 0; }
+.main .on .category-wrap{ animation: fadeIn  .3s ease-in-out 0.3s 1 forwards running; }
+.main .item-list{ opacity: 0; }
+.main .on .item-list{ animation: fadeIn  .3s ease-in-out 0.4s 1 forwards running; }
+
+.main .section7 .apply-div{ opacity: 0; }
+.main .section7.on .apply-div{ animation: fadeIn  .3s ease-in-out 0.3s 1 forwards running; }
+
+
+.sub .sub-banner .banner-bg{ animation: fadeInScale 2s ease-in-out 0s 1 forwards running; }
+.sub .sub-banner h2{ opacity: 0; animation: fadeIn  .3s ease-in-out 0s 1 forwards running; }
+.sub .sub-banner .bar-box{ opacity: 0; animation: fadeIn  .3s ease-in-out 0.1s 1 forwards running; }
+
+.sub1_1 .section1 .inner{ opacity: 0; }
+.sub1_1 .section1.on .inner{ animation: fadeIn  .3s ease-in-out 0s 1 forwards running; }
+
+.sub1_1 .section2 .half-div .box{ opacity: 0; }
+.sub1_1 .section2.on .half-div .box:nth-child(1){ animation: fadeIn  .3s ease-in-out 0.1s 1 forwards running; }
+.sub1_1 .section2.on .half-div .box:nth-child(2){ animation: fadeIn  .3s ease-in-out 0.2s 1 forwards running; }
+
+
+.sub1_1 .section3 .half-div .icon{ opacity: 0; }
+.sub1_1 .section3.on .half-div .icon{ animation: smallToBig .5s ease-in-out 0.1s 1 forwards running; }
+
+
+
+
+
+@keyframes smallToBig{
+    0%{transform: scale(.6); opacity: 0; }
+    100%{transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInScale {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
 
 @keyframes fadeIn {
-    0% {transform: translate3d(0px, 30px, 0px); }
+    0% {transform: translate3d(0px, 20px, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
 @keyframes fadeInDown {
-    0% {transform: translate3d(0px, -30px, 0px); }
+    0% {transform: translate3d(0px, -20px, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
 @keyframes fadeInRight {
-    0% { opacity: 0; transform: translate3d(30px, 0, 0px); }
+    0% { opacity: 0; transform: translate3d(20px, 0, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
 @keyframes fadeInLeft {
-    0% { opacity: 0; transform: translate3d(-30px, 0, 0px); }
+    0% { opacity: 0; transform: translate3d(-20px, 0, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
